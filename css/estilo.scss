@@ -1,3 +1,24 @@
+/* VARIÁVEIS */
+
+/// COLORS LIGHT
+$white: lighten(#808080,42);
+$light-gray: lighten(#909090,30);
+$light-skin-color: lighten(#c6a390,12);
+
+
+/// COLORS DEFAULT
+$white-dark: #808080;
+$gray: #909090;
+$skin-color: (#c6a390);
+ 
+
+/// COLORS DARK
+$dark: darken(#808080, 42);
+$dark-gray: darken(#909090,30);
+$dark-skin-color: darken(#c6a390,35);
+
+
+
 /****** ESTRUTURA DO HTML *****/
 html, body {
     margin: 0;
@@ -47,10 +68,10 @@ main {
     font-size: 16px;
     display: grid;
     margin: 10px 0;
-    grid-gap: 15px 30px;
+    grid-gap: 10px;
     justify-content: center;
     text-align: center;
-    grid-template-columns: repeat(8, 10%);
+    grid-template-columns: repeat(8, 11.5%);
     grid-template-rows: repeat(6, 15%);
 }
 
@@ -65,23 +86,26 @@ main {
     "card_nome"
     "card_hexa";
     grid-template-columns: 100%;
-    grid-template-rows: 70% 30%;
-    height: 70px;    
+    grid-template-rows: 40% 60%;
+    height: 70px;
+    padding: 0 5px;    
 }
 
 .card_nome {
     display: grid;
     grid-area: card_nome;
     width: 100%;
-    padding-top: 2%;
+    font-size: 14px;
+    font-weight: bolder;
+    padding-top: 1px;
 }
 
 .card_hexa {
     grid-area: card_hexa;
     width: 100%;
-    font-size: 18px;
-    text-decoration: underline;
+    font-size: 14px;
     text-decoration-color: #505050;
+    font-weight: 500;
 }
 
 .clara {
@@ -121,17 +145,17 @@ h5 {
 
 /* Linha 1 */
 .branco {
-    background: #f9f9f9;
+    background: $white;
     grid-area: 1 / 1 / 2 / 2;
 }
 
 .cinza_claro {
-    background-color: #cfcfcf;
+    background-color: $light-gray;
     grid-area: 1 / 2 / 2 / 3;
 }
 
 .pele_clara {
-    background: #efcfbf;
+    background: $light-skin-color;
     grid-area: 1 / 3 / 2 / 4;
 }
 
@@ -162,17 +186,17 @@ h5 {
 
 /* Linha 2 */
 .branco_preto {
-    background: #A0A0A0;
+    background: $white-dark;
     grid-area: 2 / 1 / 3 / 2;
 }
 
 .cinza {
-    background: #7f7f7f;
+    background: $gray;
     grid-area: 2 / 2 / 3 / 3;
 }
 
 .pele {
-    background: #b09080;
+    background: $skin-color;
     grid-area: 2 / 3 / 3 / 4;
 }
 
@@ -203,17 +227,17 @@ h5 {
 
 /* Linha 3 */
 .preto {
-    background: #191919;
+    background: $dark;
     grid-area: 3 / 1 / 4 / 2;
 }
 
 .cinza_escuro {
-    background: #505050;
+    background: $dark-gray;
     grid-area: 3 / 2 / 4 / 3;
 }
 
 .pele_escura {
-    background: #604040;
+    background: $dark-skin-color;
     grid-area: 3 / 3 / 4 / 4;
 }
 

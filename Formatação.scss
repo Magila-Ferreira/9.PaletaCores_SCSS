@@ -114,12 +114,27 @@ $layout-margin-size: 10px;
 
     %half-margin-#{$direction} {margin-#{$direction}: $layout-margin-size / 2;}
 }
-        /* Instalação do Saas:
+        /* 
+
+        1. Instalar RUBY:
+        http://rubyinstaller.org/downloads
+
+        *** MARCAR A OPÇÃO ***
+        Add Ruby executables to your PATH
+
+        
+        2. Instalação do Saas:
         
         Basta rodar o comando abaixo no Terminal
-        "npm install -g sass” */
+        "npm install -g sass”
 
-        /* Assistindo o Sass
+        *** RENOMEAR O ARQUIVO PARA A EXTENSÃO SCSS ***
+
+        *** CLONANDO O ARQUIVO SCSS PARA O CSS ***
+        sass estilos.scss:estilos.css
+
+
+        3. Assistindo o Sass
         
         ***   DECLARANDO A PASTA NO CMD   ***
         sass --watch scss/style.scss:css/style.css 
