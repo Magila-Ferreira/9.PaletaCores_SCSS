@@ -1,0 +1,128 @@
+/* Paleta de cores */
+
+        /***     COLORS DEFAULT  ***/
+        $light-dark: #A0A0A0;
+        $gray: #7f7f7f;
+        $skin-color: #b09080;
+        $brown: #7f5f4f;
+        $orange: #c07050;
+        $yellow: #cfbf4f;
+        $red: #d03040;
+        $purple: #BF6FCF;
+        $pink: #cF7F9F;
+        $blue: #3F7FAF;
+        $green: #5F9F5F;
+        
+        /***	COLORS LIGHT	***/                
+        $light: #F9F9F9;
+        $light-gray: #CFCFCF;
+        $light-skin-color: #E0C0B0;
+        $light-brown: #BF8F7F;
+        $light-orange: #EFBF8F;
+        $light-yellow: #FFFF9F;
+        $light-red: #FF9FAF;
+        $light-purple: #EFAFFF;
+        $light-pink: #FFAFCF;
+        $light-blue: #AFDFFF;
+        $light-green: #AFEFAF;
+        
+        /***	COLORS DARK	***/
+        $dark: #191919;
+        $dark-gray: #505050;
+        $dark-skin-color: #604040;
+        $dark-brown: #403020;
+        $dark-orange: #903010;
+        $dark-yellow: #807020;
+        $dark-red: #501010; 
+        $dark-purple: #600070;
+        $dark-pink: #904060; 
+        $dark-blue: #003060;
+        $dark-green: #004000; 
+
+        /***	COPYRIGHT	***/
+        //      &copy; 
+
+        /***	FONT-FAMILY	***/
+        h1 {font-family: 'Indie Flower', cursive };
+        h2 {font-family: 'Amiri', serif };     
+        h3 {font-family: 'Allison', cursive };
+        h4 {font-family: 'Edwardian Script ITC' };
+        h5 {font-family: 'Courier New', Courier, monospace };	     
+        h6 {font-family: 'Parisienne', cursive };
+
+        p {font-family: 'Courier New', Courier, monospace };
+
+/*              MANIPULANDO O SASS              */
+
+/// WIDTH:
+$img-width: 45%;
+
+/// PLACEHOLDER SELECTOR:
+%no-decoration { text-decoration: none; }
+%u-decoration { text-decoration: underline; }
+
+/// Aula 3 - Mixin
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+};
+
+@mixin flx($property, $jty-cnt) {
+    display: flex;
+    #{$property}: $jty-cnt;
+}
+
+/// Aula 3 - Media queries and Mixins
+@mixin for-phone-only {
+    @media (max-width: 767.98px) { @content; }
+};
+
+@mixin for-tablet-only {
+    @media (min-width: 768px) and (max-width: 1199.98px) { @content; } 
+};
+
+@mixin for-desktop-only {
+    @media (min-width: 1200px) { @content; }
+};
+
+/// Aula 3 - Function 
+@function calculateRem($size) {
+    @return $size / 16px * 1rem;
+}
+
+@mixin fontSize($size) {
+    font-size: calculateRem($size);
+}
+
+/// Aula 4 - Controle de fluxo e laços de repetição:
+
+// VARIÁVEIS
+$directions: top, right, bottom, left;
+$layout-margin-size: 10px;
+
+// CONTROLE DE FLUXO 
+@each $direction in $directions {
+    // ZERANDO A MARGIN
+    %no-margin-#{$direction} {margin-#{$direction}: 0;}
+    
+    // ATRIBUINDO UMA MARGIN PADRÃO - VARIÁVEL LAYOUT
+    %default-margin-#{$direction} {margin-#{$direction}: $layout-margin-size;}
+
+    // MARGINS CALCULADAS: DOUBLE AND HALF
+    %double-margin-#{$direction} {margin-#{$direction}: $layout-margin-size * 2;}
+
+    %half-margin-#{$direction} {margin-#{$direction}: $layout-margin-size / 2;}
+}
+        /* Instalação do Saas:
+        
+        Basta rodar o comando abaixo no Terminal
+        "npm install -g sass” */
+
+        /* Assistindo o Sass
+        
+        ***   DECLARANDO A PASTA NO CMD   ***
+        sass --watch scss/style.scss:css/style.css 
+
+        ***   RODANDO O CMD DENTRO DA PASTA   ***
+        sass --watch estilos.scss:estilos.css */
