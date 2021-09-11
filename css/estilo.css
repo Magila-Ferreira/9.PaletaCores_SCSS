@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* VARIÁVEIS */
+/****** MIXINS DE TELA ******/
 /****** ESTRUTURA DO HTML *****/
 html, body {
   margin: 0;
@@ -7,17 +8,17 @@ html, body {
 }
 
 .layout {
-  background: #f9f9f9;
+  background: #ebebeb;
   display: grid;
   font-family: "Courier New", Courier, monospace;
   grid-template-areas: "titulo" "grid" "autoria";
   grid-template-columns: auto;
-  grid-template-rows: 35px auto 40px;
+  grid-template-rows: 60px auto 40px;
 }
 
 .titulo {
   grid-area: titulo;
-  background-image: radial-gradient(#f9f9f9, #cfcfcf, #191919 90%);
+  background-image: radial-gradient(#ebebeb, #dddddd, #909090, #151515);
   display: flex;
   align-items: center;
 }
@@ -33,8 +34,8 @@ main {
 
 .grid {
   grid-area: grid;
-  background-image: linear-gradient(#f9f9f9, #cfcfcf, #5f5f5f);
-  height: calc(100vh - 75px);
+  background-image: linear-gradient(#ebebeb, #909090, #444444);
+  height: calc(100vh - 100px);
 }
 
 .color {
@@ -54,7 +55,7 @@ main {
 }
 
 .bloco {
-  border-bottom: 1px dashed #f9f9f9;
+  border-bottom: 1px dashed #ebebeb;
   grid-area: 3/1/3/9;
   margin-bottom: -5px;
 }
@@ -85,24 +86,24 @@ main {
 }
 
 .clara {
-  color: #505050;
-  border: 1px solid #cfcfcf;
+  color: #444444;
+  border: 1px solid #909090;
 }
 
 .default {
-  color: #191919;
-  border: 1px solid #cfcfcf;
+  color: #151515;
+  border: 1px solid #dddddd;
 }
 
 .escura {
-  color: #a0a0a0;
-  border: 1px solid #cfcfcf;
+  color: #909090;
+  border: 1px solid #dddddd;
 }
 
 .autoria {
   grid-area: autoria;
-  background: #191919;
-  color: #f9f9f9;
+  background: #151515;
+  color: #ebebeb;
   font-size: 12px;
   text-align: center;
 }
@@ -129,17 +130,17 @@ h5 {
 }
 
 .pele_clara {
-  background: #dbc5b8;
+  background: #d7b2aa;
   grid-area: 1/3/2/4;
 }
 
 .marrom_claro {
-  background: #bf8f7f;
+  background: #bba092;
   grid-area: 1/4/2/5;
 }
 
 .laranja_claro {
-  background: #efbf8f;
+  background: #f3ab93;
   grid-area: 1/5/2/6;
 }
 
@@ -149,12 +150,12 @@ h5 {
 }
 
 .vermelho_claro {
-  background-color: #ff9faf;
+  background-color: #e18181;
   grid-area: 1/7/2/8;
 }
 
 .roxo_claro {
-  background: #efafff;
+  background: #f9d6ff;
   grid-area: 1/8/2/9;
 }
 
@@ -170,7 +171,7 @@ h5 {
 }
 
 .pele {
-  background: #c6a390;
+  background: #af6453;
   grid-area: 2/3/3/4;
 }
 
@@ -180,22 +181,22 @@ h5 {
 }
 
 .laranja {
-  background: #c07050;
+  background: #e96337;
   grid-area: 2/5/3/6;
 }
 
 .amarelo {
-  background: #cfbf4f;
+  background: #ecec00;
   grid-area: 2/6/3/7;
 }
 
 .vermelho {
-  background: #d03040;
+  background: #cc3030;
   grid-area: 2/7/3/8;
 }
 
 .roxo {
-  background: #bf6fcf;
+  background: #eb70ff;
   grid-area: 2/8/3/9;
 }
 
@@ -211,12 +212,12 @@ h5 {
 }
 
 .pele_escura {
-  background: #6c4a37;
+  background: #593229;
   grid-area: 3/3/4/4;
 }
 
 .marrom_escuro {
-  background: #403020;
+  background: #403028;
   grid-area: 3/4/4/5;
 }
 
@@ -226,12 +227,12 @@ h5 {
 }
 
 .amarelo_escuro {
-  background: #807020;
+  background: #6c6c00;
   grid-area: 3/6/4/7;
 }
 
 .vermelho_escuro {
-  background: #501010;
+  background: #501313;
   grid-area: 3/7/4/8;
 }
 
@@ -242,17 +243,17 @@ h5 {
 
 /* Linha 4 */
 .rosa_claro {
-  background: #ffafcf;
+  background: #ebc9d7;
   grid-area: 4/1/5/2;
 }
 
 .azul_claro {
-  background: #afdfff;
+  background: #82b0d2;
   grid-area: 4/2/5/3;
 }
 
 .verde_claro {
-  background: #afefaf;
+  background: #9fc59f;
   grid-area: 4/3/5/4;
 }
 
@@ -274,17 +275,17 @@ h5 {
 
 /* Linha 6 */
 .rosa_escuro {
-  background: #904060;
+  background: #5f233b;
   grid-area: 6/1/7/2;
 }
 
 .azul_escuro {
-  background: #003060;
+  background: #172d3f;
   grid-area: 6/2/7/3;
 }
 
 .verde_escuro {
-  background: #004000;
+  background: #263f26;
   grid-area: 6/3/7/4;
 }
 
